@@ -104,7 +104,7 @@ header {
 
 .principal {
     width: 100%;
-    min-height: 640px;
+    min-height: 600px;
     position: relative;
     display: flex;
     align-items: center;
