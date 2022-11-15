@@ -35,7 +35,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 100px;
+    padding: 1.4em 5em;
     transition: 0.5s;
 }
 
@@ -49,7 +49,7 @@ header {
 }
 
 .logo .bx {
-    font-size: 24px;
+    font-size: 1.5em;
     color: var(--main-color);
 }
 
@@ -71,10 +71,10 @@ header {
 .menu a::after {
     content: '';
     width: 0%;
-    height: 2px;
+    height: 0.15em;
     background: var(--main-color);
     position: absolute;
-    bottom: -4px;
+    bottom: -0.4em;
     left: 0%;
     transition: 0.2s all linear;
 }
@@ -84,7 +84,7 @@ header {
 }
 
 #menu-icon {
-    font-size: 24px;
+    font-size: 1.5em;
     cursor: pointer;
     z-index: 1000001;
     display: none;
@@ -104,7 +104,7 @@ header {
 
 .principal {
     width: 100%;
-    min-height: 600px;
+    min-height: 38em;
     position: relative;
     display: flex;
     align-items: center;
