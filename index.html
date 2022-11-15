@@ -11,11 +11,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <!-- Box Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     </head>
 
     <body>
-       <header>
+        <header>
             <a href="#" class="logo"><i class='bx bxs-movie'></i>Andrade Filmes</a>
             <div class="bx bx-menu" id="menu-icon"></div>
 
@@ -23,40 +23,97 @@
                 <li><a href="#home" id="home"><i class='bx bxs-home'></i></a></li>
                 <li><a href="#filmes">Filmes</a></li>
                 <li><a href="#series">Series</a></li>
+<<<<<<< Updated upstream
+=======
+                <li>
+                    <div class="search-container">
+                        <label for="search-input"><i class='bx bx-search'></i></label>
+                        <input type="search" class="search-input" placeholder="Buscar filmes" id="search-input" required />
+                    </div>
+                </li>
+>>>>>>> Stashed changes
             </ul>
 
             <a href="#" class="login">Login</a>
-       </header>
+        </header>
 
-       <main>
-            <section class="home swiper" id="fundo">
+        <main>
+            <section class="swiper" id="fundo">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide principal">
                         <img src="images/Vingadores.jpg">
+                        <div class="play"><i class='bx bx-play'></i></div>
+                        <div class="video-container">
+                            <div class="video-box">
+                                <video src="videos/Vingadores_ Ultimato _ Trailer Legendado (720p).mp4" class="trailer" controls></video>
+                                <i class="bx bx-x close-video"></i>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="swiper-slide principal">
                         <img src="images/John_Wick.jpg">
+                        <div class="play"><i class='bx bx-play'></i></div>
+                        <div class="video-container">
+                            <div class="video-box">
+                                <video src="videos/John Wick 4_ Baba Yaga _ Trailer Legendado (1080p).webm" class="trailer" controls></video>
+                                <i class="bx bx-x close-video"></i>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="swiper-slide principal">
                         <img src="images/Vikings.jpg">
+                        <div class="play"><i class='bx bx-play'></i></div>
+                        <div class="video-container">
+                            <div class="video-box">
+                                <video src="videos/Vikings Season 1 Trailer (1080p).webm" class="trailer" controls></video>
+                                <i class="bx bx-x close-video"></i>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="swiper-slide principal">
                         <img src="images/GOT.jpg">
+                        <div class="play"><i class='bx bx-play'></i></div>
+                        <div class="video-container">
+                            <div class="video-box">
+                                <video src="videos/Game of Thrones _ Official Series Trailer (HBO) (1080p).webm" class="trailer" controls></video>
+                                <i class="bx bx-x close-video"></i>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="swiper-slide principal">
                         <img src="images/1917.jpg">
+                        <div class="play"><i class='bx bx-play'></i></div>
+                        <div class="video-container">
+                            <div class="video-box">
+                                <video src="videos/1917 – Trailer Final Legendado (1080p).webm" class="trailer" controls></video>
+                                <i class="bx bx-x close-video"></i>
+                            </div>
+                        </div>
                     </div>
+<<<<<<< Updated upstream
                   </div>
                   
                   <div class="swiper-pagination"></div>
+=======
+                    
+                </div>
+                <div class="swiper-pagination"></div>
             </section>
-       </main>
 
+            <section id="sessao-filmes">
+                
+>>>>>>> Stashed changes
+            </section>
+        </main>
+
+        <!--Biblioteca JS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <!--My JS-->
         <script src="index.js"></script>
     </body>
 </html>
