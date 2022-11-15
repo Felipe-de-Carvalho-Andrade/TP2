@@ -1,11 +1,5 @@
 /* Google Fonts */
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
->>>>>>> design
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0%;
@@ -18,13 +12,7 @@
 }
 
 /* Outros */
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
->>>>>>> design
 :root {
     --main-color: #ff2c1f;
     --text-color: #020307;
@@ -49,15 +37,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-<<<<<<< HEAD
     padding: 1.4em 5em;
-=======
-<<<<<<< Updated upstream
-    padding: 20px 100px;
-=======
-    padding: 1.4em 5em;
->>>>>>> Stashed changes
->>>>>>> design
     transition: 0.5s;
 }
 
@@ -71,15 +51,7 @@ header {
 }
 
 .logo .bx {
-<<<<<<< HEAD
     font-size: 1.5em;
-=======
-<<<<<<< Updated upstream
-    font-size: 24px;
-=======
-    font-size: 1.5em;
->>>>>>> Stashed changes
->>>>>>> design
     color: var(--main-color);
 }
 
@@ -101,23 +73,10 @@ header {
 .menu a::after {
     content: '';
     width: 0%;
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-    height: 2px;
-    background: var(--main-color);
-    position: absolute;
-    bottom: -4px;
-=======
->>>>>>> design
     height: 0.15em;
     background: var(--main-color);
     position: absolute;
     bottom: -0.4em;
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> design
     left: 0%;
     transition: 0.2s all linear;
 }
@@ -127,15 +86,7 @@ header {
 }
 
 #menu-icon {
-<<<<<<< HEAD
     font-size: 1.5em;
-=======
-<<<<<<< Updated upstream
-    font-size: 24px;
-=======
-    font-size: 1.5em;
->>>>>>> Stashed changes
->>>>>>> design
     cursor: pointer;
     z-index: 1000001;
     display: none;
@@ -155,15 +106,7 @@ header {
 
 .principal {
     width: 100%;
-<<<<<<< HEAD
     min-height: 38em;
-=======
-<<<<<<< Updated upstream
-    min-height: 600px;
-=======
-    min-height: 38em;
->>>>>>> Stashed changes
->>>>>>> design
     position: relative;
     display: flex;
     align-items: center;
@@ -190,12 +133,8 @@ header {
 .swiper-pagination-bullet-active{
     width: 1.5rem !important;
     background: var(--main-color) !important;
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
 }
-=======
-}
+
 
 .play {
     position: absolute;
@@ -216,7 +155,6 @@ header {
     background: var(--main-color);
     color: var(--bg-color);
     transition: 0.2s all linear;
->>>>>>> design
 }
 
 /* Barra de Buscas */
@@ -227,21 +165,13 @@ header input {
 }
 
 .search-container {
-<<<<<<< HEAD
-    margin-top: 0.1%;
-=======
     margin-top: 0%;
->>>>>>> design
     position: relative;
     width: 3em;
     height: 2em;
 }
 
-<<<<<<< HEAD
-.search-icon {
-=======
 .search-container label i{
->>>>>>> design
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,31 +179,6 @@ header input {
     width: 2em;
     height: 2em;
     border-radius: 50%;
-<<<<<<< HEAD
-    transform: rotate(45deg);
-    cursor: pointer;
-}
-
-.search-icon::before {
-    content: '';
-    width: 25%;
-    height: 25%;
-    border-radius: 50%;
-    border: 2px solid #fff;
-}
-
-.search-icon::after {
-    content: '';
-    width: 20%;
-    height: 2px;
-    background-color: #fff;
-}
-
-.search-input {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-=======
     cursor: pointer;
 }
 
@@ -281,7 +186,6 @@ header input {
     width: 100%;
     height: 100%;
     border-radius: 1.3em;
->>>>>>> design
     border: none;
     outline: none;
     padding-left: 2em;
@@ -289,15 +193,6 @@ header input {
 }
 
 .search-input:focus {
-<<<<<<< HEAD
-    width: 250px;
-    box-shadow: 1em 1em 1.1em #777;
-}
-
-.search-input:valid {
-    width: 250px;
-}
-=======
     width: 20em;
     box-shadow: 1em 1em 1.1em rgb(221, 9, 157);
 }
@@ -344,5 +239,3 @@ header input {
 }
 
 /* Sessão de Filmes*/
->>>>>>> Stashed changes
->>>>>>> design

@@ -1,39 +1,14 @@
-<<<<<<< HEAD
-let swiper = new Swiper(".home", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-=======
-<<<<<<< Updated upstream
-let swiper = new Swiper(".home", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-});
-=======
 let swiper = new Swiper("#fundo", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
     delay: 5000,
->>>>>>> design
     disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-<<<<<<< HEAD
-});
-=======
 });
 
 //Show Video
@@ -52,6 +27,3 @@ for (let i = 0; i < playButton.length; i++) {
     trailer[i].pause();
   }
 };
-
->>>>>>> Stashed changes
->>>>>>> design
