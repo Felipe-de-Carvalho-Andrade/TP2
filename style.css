@@ -28,6 +28,8 @@ section {
     padding: 4.5rem 0 1.5rem;
 }
 
+/* Menu */
+
 header {
     position: fixed;
     width: 100%;
@@ -104,6 +106,37 @@ header {
     background-color: #fa1216;
 }
 
+header.menu-cor {
+    background: var(--bg-color);
+}
+
+header.menu-cor a, header.menu-cor .logo {
+    color: var(--text-color);
+}
+
+header.menu-cor input {
+    color: var(--bg-color);
+    background: var(--text-color);
+}
+
+header.menu-cor .bx-search {
+    color: var(--bg-color);
+}
+
+/* Barra de rolagem */
+
+html::-webkit-scrollbar {
+    width: 0.3rem;
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+} 
+
+/* Slides */
+
 .principal {
     width: 100%;
     min-height: 38em;
@@ -171,7 +204,7 @@ header input {
     height: 2em;
 }
 
-.search-container label i{
+.search-container label i {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,3 +272,67 @@ header input {
 }
 
 /* Sessão de Filmes*/
+
+
+
+
+/* ----- RESPONSIIVDADE ----- */
+@media (max-width: 990px) {
+    header {
+        padding: 18px 4%;
+    }
+    section {
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 775px) {
+    header {
+        padding: 12px 4%;
+    }
+    #menu-icon {
+        display: initial;
+        padding-right: 3.3em;
+        color: var(--bg-color);
+    }
+    header.menu-cor #menu-icon {
+        color: var(--text-color);
+        display: flex;
+        justify-content: flex-start;
+    }
+    .menu {
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        row-gap: 1.4rem;
+        padding: 20px;
+        box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+        transition: 0.2s all linear;
+        text-align: center;
+    }
+    header input {
+        color: var(--text-color);
+        background: transparent;
+    }
+    header .bx-search {
+        color: var(--text-color);
+    }
+    .menu a {
+        width: 100%;
+        color: var(--text-color);
+    }
+    .menu a:hover {
+        color: var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+    }
+    .menu a::after {
+        display: none;
+    }
+    .menu.ativo {
+        top: 100%;
+    }
+}

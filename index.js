@@ -28,3 +28,20 @@ for (let i = 0; i < playButton.length; i++) {
     trailer[i].pause();
   }
 };
+
+//Menu 
+addEventListener('scroll', () => {
+  $('header').toggleClass('menu-cor', window.scrollY > 0);
+});
+
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.menu');
+
+menu.onclick = () => {
+  menu.classList.toggle('bx-x');
+  navbar.classList.toggle('ativo');
+}
+window.onscroll = () => {
+  menu.classList.remove('bx-x');
+  navbar.classList.remove('ativo');
+}
