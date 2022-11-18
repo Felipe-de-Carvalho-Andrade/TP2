@@ -1,4 +1,4 @@
-let swiper = new Swiper("#fundo", {
+new Swiper("#fundo", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
@@ -11,7 +11,8 @@ let swiper = new Swiper("#fundo", {
   },
 });
 
-//Show Video
+//Trailer
+
 let playButton = document.querySelectorAll(".bx-play");
 let video = document.querySelectorAll(".video-container");
 let trailer = document.querySelectorAll(".trailer");
