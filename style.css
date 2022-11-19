@@ -295,6 +295,9 @@ header input {
         padding-right: 3.3em;
         color: var(--bg-color);
     }
+    .menu li .search-container {
+        margin-left: 46.5%;
+    }
     header.menu-cor #menu-icon {
         color: var(--text-color);
         display: flex;
@@ -336,3 +339,9 @@ header input {
         top: 100%;
     }
 }
+
+@media (max-width: 590px) {
+    .swiper i {
+        visibility: hidden;
+    }
+} 
