@@ -1,68 +1,92 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Andrade Filmes</title>
-        <link rel="stylesheet" href="style.css">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <!-- Box Icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-    </head>
 
-    <body>
-       <header>
-            <a href="#" class="logo"><i class='bx bxs-movie'></i>Andrade Filmes</a>
-            <div class="bx bx-menu" id="menu-icon"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrade Filmes</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
 
-            <ul class="menu">
-                <li><a href="#home" id="home"><i class='bx bxs-home'></i></a></li>
-                <li><a href="#filmes">Filmes</a></li>
-                <li><a href="#series">Series</a></li>
-                <li>
-                    <div class="search-container">
-                        <label for="search-input" class="search-icon"></label>
-                        <input type="text" class="search-input" placeholder="Buscar filmes" id="search-input" required />
-                    </div>
-                </li>
-            </ul>
+<body>
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-movie'></i>Andrade Filmes</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
 
-            <a href="login.html" class="login">Login</a>
-       </header>
+        <ul class="menu">
+            <li><a href="#home" id="home"><i class='bx bxs-home'></i></a></li>
+            <li><a href="#filmes">Filmes</a></li>
+            <li><a href="#series">Series</a></li>
+            <li>
+                <div class="search-container">
+                    <label for="search-input" class="search-icon"></label>
+                    <input type="text" class="search-input" placeholder="Buscar filmes" id="search-input" required />
+                </div>
+            </li>
+        </ul>
 
-       <main>
-            <section class="home swiper" id="fundo">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide principal">
-                        <img src="images/Vingadores.jpg">
-                    </div>
+        <button id="botaologin" class="login">Login</button>
+    </header>
 
-                    <div class="swiper-slide principal">
-                        <img src="images/John_Wick.jpg">
-                    </div>
+    <main>
 
-                    <div class="swiper-slide principal">
-                        <img src="images/Vikings.jpg">
-                    </div>
 
-                    <div class="swiper-slide principal">
-                        <img src="images/GOT.jpg">
-                    </div>
+        <section class="home swiper" id="fundo">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide principal">
+                    <img src="images/Vingadores.jpg">
+                </div>
 
-                    <div class="swiper-slide principal">
-                        <img src="images/1917.jpg">
-                    </div>
-                  </div>
-                  <div class="swiper-pagination"></div>
+                <div class="swiper-slide principal">
+                    <img src="images/John_Wick.jpg">
+                </div>
 
-            </section>
-       </main>
+                <div class="swiper-slide principal">
+                    <img src="images/Vikings.jpg">
+                </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-        <script src="index.js"></script>
-    </body>
+                <div class="swiper-slide principal">
+                    <img src="images/GOT.jpg">
+                </div>
+
+                <div class="swiper-slide principal">
+                    <img src="images/1917.jpg">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </section>
+        
+            <nav id="telalogin">
+                <button id="x" class="login">X</button>
+                <form id="form-login">
+                    <legend><b>Login de Conta</b></legend>
+                    <br></br>
+                    <div class="input"> <input id="nome" class="inputlogin" type="text" required><label for="nome"
+                            class="labelinput">Nome de
+                            Usuário</label></div><br><br>
+                    <div class="input"> <input id="senha" class="inputlogin" type="password" required><label for="senha"
+                            class="labelinput">Senha do
+                            Usuário</label><br></div><br>
+                    <div class="input"> <input id="salvarcredenciais" name="check" type="checkbox"> <label
+                            for="salvarcredenciais"> Salvar suas credenciais
+                            nesse dispositivo?</label><br><br></div>
+                    <input type="submit" form="form-login" id="enviar" class="login"><br>
+                </form>
+            </nav>
+        
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
 </html>

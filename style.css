@@ -196,11 +196,13 @@ header input {
 }
 
 #telalogin {
+  z-index: 1;
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgb(105, 105, 105);
   border-radius: 17px;
   padding: 10px;
   width: 30%;
@@ -213,28 +215,32 @@ legend {
 }
 
 .inputlogin {
-    background: none;
-    border: none;
-    border-bottom: 1px solid white;
-    outline: none;
-    color: white;
-    font-size: 15px;
-    width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  width: 100%;
 }
 .labelinput {
   position: absolute;
   top: 0px;
   left: 0px;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.inputlogin:focus ~ .labelinput,.inputlogin:valid ~ .labelinput
- {
+.inputlogin:focus ~ .labelinput,
+.inputlogin:valid ~ .labelinput {
   top: -20px;
   font-size: 12px;
 }
 
-.input{
-    position: relative;
+.input {
+  position: relative;
+}
+
+#x {
+  float: right;
 }
