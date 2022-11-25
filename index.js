@@ -2,7 +2,7 @@ new Swiper("#fundo", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
-    delay: 5000,
+    delay: 2500,
     disableOnInteraction: false,
   },
   pagination: {
@@ -12,20 +12,14 @@ new Swiper("#fundo", {
 });
 
 //Trailer
-
-let playButton = document.querySelectorAll(".bx-play");
-let video = document.querySelectorAll(".video-container");
-let trailer = document.querySelectorAll(".trailer");
-let close = document.querySelectorAll(".close-video");
-
-for (let i = 0; i < playButton.length; i++) {
-  playButton[i].onclick = () => {
-    video[i].classList.add("show-video");
-    trailer[i].play();
+for (let i = 0; i < $('.bx-play').length; i++) {
+  $('.bx-play')[i].onclick = () => {
+    $('.video-container')[i].classList.add("show-video");
+    $('.trailer')[i].play();
   };
-  close[i].onclick = () => {
-    video[i].classList.remove("show-video");
-    trailer[i].pause();
+  $('.close-video')[i].onclick = () => {
+    $('.video-container')[i].classList.remove("show-video");
+    $('.trailer').pause();
   }
 };
 
@@ -44,3 +38,6 @@ window.onscroll = () => {
   $('#menu-icon').removeClass('bx-x');
   $('.menu').removeClass('ativo');
 }
+
+
+fetch('https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1')
