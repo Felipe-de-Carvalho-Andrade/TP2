@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Box Icons -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
@@ -32,7 +33,10 @@
             </li>
         </ul>
 
-        <button id="botaologin" class="login">Login</button>
+        <div>
+            <button id="botaocadastro" class="login">cadastro</button>
+            <button id="botaologin"class="login">login</button>
+        </div>
     </header>
 
     <main>
@@ -63,25 +67,32 @@
             <div class="swiper-pagination"></div>
 
         </section>
-        
-            <nav id="telalogin">
-                <button id="x" class="login">X</button>
-                <form id="form-login">
-                    <legend><b>Login de Conta</b></legend>
-                    <br></br>
-                    <div class="input"> <input id="nome" class="inputlogin" type="text" required><label for="nome"
-                            class="labelinput">Nome de
-                            Usuário</label></div><br><br>
-                    <div class="input"> <input id="senha" class="inputlogin" type="password" required><label for="senha"
-                            class="labelinput">Senha do
-                            Usuário</label><br></div><br>
-                    <div class="input"> <input id="salvarcredenciais" name="check" type="checkbox"> <label
-                            for="salvarcredenciais"> Salvar suas credenciais
-                            nesse dispositivo?</label><br><br></div>
-                    <input type="submit" form="form-login" id="enviar" class="login"><br>
-                </form>
-            </nav>
-        
+        <nav id="telalogin">
+            <div id="alert"></div>
+            <button id="x" class="login">X</button>
+            <form id="form-login">
+                <legend><b>cadastre-se</b></legend>
+                <br></br>
+                <div class="input">
+                    <input id="nome" name="nome" class="inputlogin" type="text" required>
+                    <label for="nome" class="labelinput">Nome de Usuário</label>
+                </div><br><br>
+
+                <div class="input">
+                    <input id="senha" name="senha" class="inputlogin" type="password" required>
+                    <label for="senha" class="labelinput">Senha do Usuário</label><br>
+                </div><br>
+
+                <div class="input">
+                    <input id="check" name="check" type="checkbox">
+                    <label for="check"> Salvar suas credenciais nesse dispositivo?</label><br><br>
+                </div>
+
+                <input type="button" name="submit" form="form-login" id="submit" class="login" value="cadastre-se">
+                    <input type="button" name="login" form="form-login" id="login" class="login" value="login"><br>
+            </form>
+        </nav>
+
     </main>
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>

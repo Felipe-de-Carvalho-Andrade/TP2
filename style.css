@@ -1,5 +1,5 @@
 /* Google Fonts */
-* {
+ * {
   font-family: "Roboto", sans-serif;
   margin: 0%;
   padding: 0%;
@@ -10,7 +10,7 @@
   scroll-behavior: smooth;
 }
 
-/* Outros */
+/*Outros*/
 :root {
   --main-color: #ff2c1f;
   --text-color: #020307;
@@ -193,7 +193,7 @@ header input {
 
 .search-input:valid {
   width: 250px;
-}
+} 
 
 #telalogin {
   z-index: 1;
@@ -244,3 +244,4 @@ legend {
 #x {
   float: right;
 }
+

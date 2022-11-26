@@ -1,3 +1,14 @@
+function checklogin(ar) {
+  ar.forEach((nomes) => {
+    if (nomes.nome == $("#nome").val() && nomes.senha == $("#senha").val()) {
+      usuario.senha = nomes.senha;
+      usuario.nome = nomes.nome;
+      sessionStorage.setItem("usuario", JSON.stringify(usuario));
+      return 0;
+    } else return 1;
+  });
+}
+
 let swiper = new Swiper(".home", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -11,50 +22,99 @@ let swiper = new Swiper(".home", {
   },
 });
 
-let usuario = { nome: "", senha: "" };
-let $nome = $("#nome");
-let $senha = $("#senha");
-let lsEL = localStorage.getItem("usuario");
+let usuario = {
+  nome: "",
+  senha: "",
+};
 
-if (lsEL != undefined) {
-  usuario = JSON.parse(lsEL);
-  $nome.val(usuario.nome);
-  $senha.val(usuario.senha);
+let user;
+
+let us = localStorage.getItem("usuario");
+if (us != undefined) {
+  let usuario = JSON.parse(us);
+  $("#nome").val(usuario.nome);
+  $("#senha").val(usuario.senha);
 }
 
-$("#form-login").submit((e) => {
-  e.preventDefault();
-  $("#telalogin").toggle();
-
-usuario.nome = $nome.val();
-usuario.senha = $senha.val();
-let $checkbox = $("#salvarcredenciais").prop('checked');
-
-  sessionStorage.setItem("usuario", JSON.stringify(usuario));
-
-  if ($checkbox) {
-    localStorage.setItem("usuario", JSON.stringify(usuario));
+$("#submit").on("click", () => {
+  if (
+    $("#nome").val() == "" ||
+    $("#senha").val() == "" ||
+    $("#nome").val() == " " ||
+    $("#senha").val() == " "
+  ) {
+    alert("preencher todos os campos");
+    return false;
   }
-  else {
-    let apagar = localStorage.getItem("usuario");
+  $.ajax({
+    url: "enviar.php",
+    method: "POST",
+    data: { nome: $("#nome").val(), senha: $("#senha").val() },
+    success: () => {
+      if ($("#check").prop("checked")) {
+        usuario.nome = $("#nome").val();
+        usuario.senha = $("#senha").val();
 
-    if (apagar != undefined) {
-      localStorage.removeItem("usuario");
-    }
-  }
+        localStorage.setItem("usuario", JSON.stringify(usuario));
+      }
 
-  $nome.val("");
-  $senha.val("");
+      $("#nome").val("");
+      $("#senha").val("");
+      alert("cadastro efetuado");
+      $("#telalogin").toggle();
+    },
+  });
 });
 
-$('#botaologin').on('click', ()=>{
-  
+$("#login").on("click", () => {
+  if (
+    $("#nome").val() == "" ||
+    $("#senha").val() == "" ||
+    $("#nome").val() == " " ||
+    $("#senha").val() == " "
+  ) {
+    alert("preencher todos os campos");
+    return false;
+  }
+
+  $.ajax({
+    url: "receber.php",
+    success: (re) => {
+      user = JSON.parse(re);
+      user.pop();
+      if (checklogin(user) == 1) {
+        alert("dados incorretos");
+        return false;
+      }
+      $("#botaologin").before('<div class="login">' + usuario.nome + "</div>");
+      $("#botaologin").remove();
+      $("#botaocadastro").remove();
+
+      $("#nome").val("");
+      $("#senha").val("");
+      $("#telalogin").toggle();
+    },
+  });
+});
+
+$("#botaocadastro").on("click", () => {
   $("#telalogin").toggle();
+  $("legend b").html("cadastre-se");
+  $("#check").css("visibility", "inherit");
+  $("[for=check]").css("visibility", "inherit");
+  $("#login").css("display", "none");
+  $("#submit").css("display", "inherit");
+});
 
-})
-
-$('#x').on('click', ()=>{
-  
+$("#botaologin").on("click", () => {
   $("#telalogin").toggle();
+  $("legend b").html("login de conta");
+  $("#check").css("visibility", "hidden");
+  $("[for=check]").css("visibility", "hidden");
+  $("#submit").css("display", "none");
+  $("#login").css("display", "inherit");
+});
 
-})
+$("#x").on("click", () => {
+  $("#telalogin").toggle();
+});
