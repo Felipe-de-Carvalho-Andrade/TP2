@@ -1,12 +1,13 @@
-function checklogin(ar) {
-  ar.forEach((nomes) => {
+function checklogin(user){
+  user.forEach((nomes) => {
     if (nomes.nome == $("#nome").val() && nomes.senha == $("#senha").val()) {
       usuario.senha = nomes.senha;
       usuario.nome = nomes.nome;
       sessionStorage.setItem("usuario", JSON.stringify(usuario));
+      localStorage.setItem("usuario", JSON.stringify(usuario));
       return 0;
-    } else return 1;
-  });
+  }});
+return 1;
 }
 
 let swiper = new Swiper(".home", {
