@@ -11,99 +11,100 @@
     scroll-behavior: smooth;
 }
 
-/* Outros */
-
+/*Outros*/
 :root {
-    --main-color: #ff2c1f;
-    --text-color: #020307;
-    --bg-color: #fff;
+  --main-color: #ff2c1f;
+  --text-color: #020307;
+  --bg-color: #fff;
 }
 
 body {
-    background: var(--text-color);
-    color: var(--bg-color);
+  background: var(--text-color);
+  color: var(--bg-color);
 }
 
 section {
-    padding: 4.5rem 0 1.5rem;
+  padding: 4.5rem 0 1.5rem;
 }
 
 /* Menu */
 
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.4em 5em;
-    transition: 0.5s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4em 5em;
+  transition: 0.5s;
 }
 
 .logo {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--bg-color);
-    display: flex;
-    align-items: center;
-    column-gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
 }
 
 .logo .bx {
-    font-size: 1.5em;
-    color: var(--main-color);
+  font-size: 1.5em;
+  color: var(--main-color);
 }
 
 .menu {
-    display: flex;
-    column-gap: 5rem; 
+  display: flex;
+  column-gap: 5rem;
 }
 
-.menu li{
-    position: relative;
+.menu li {
+  position: relative;
 }
 
 .menu a {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--bg-color);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bg-color);
 }
 
 .menu a::after {
-    content: '';
-    width: 0%;
-    height: 0.15em;
-    background: var(--main-color);
-    position: absolute;
-    bottom: -0.4em;
-    left: 0%;
-    transition: 0.2s all linear;
+  content: "";
+  width: 0%;
+  height: 0.15em;
+  background: var(--main-color);
+  position: absolute;
+  bottom: -0.4em;
+  left: 0%;
+  transition: 0.2s all linear;
 }
 
-.menu a:hover::after, #home::after {
-    width: 100%;
+.menu a:hover::after,
+#home::after {
+  width: 100%;
 }
 
 #menu-icon {
-    font-size: 1.5em;
-    cursor: pointer;
-    z-index: 1000001;
-    display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 1000001;
+  display: none;
 }
 
 .login {
-    padding: 0.7rem 1.4rem;
-    background: var(--main-color);
-    color: var(--bg-color);
-    font-weight: 400;
-    border-radius: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-weight: 400;
+  border-radius: 0.5rem;
+  border: none;
 }
 
 .login:hover {
-    background-color: #fa1216;
+  background-color: #fa1216;
 }
 
 header.menu-cor {
@@ -138,34 +139,34 @@ html::-webkit-scrollbar-thumb {
 /* Slides */
 
 .principal {
-    width: 100%;
-    min-height: 38em;
-    position: relative;
-    display: flex;
-    align-items: center;
-    background: rgb(2, 3, 7, 0.4);
+  width: 100%;
+  min-height: 38em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgb(2, 3, 7, 0.4);
 }
 
 .principal img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
 }
 
 .swiper-pagination-bullet {
-    width: 6px !important;
-    height: 6px !important;
-    border-radius: 0.2rem !important;
-    background: var(--bg-color) !important;
-    opacity: 1 !important;
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 0.2rem !important;
+  background: var(--bg-color) !important;
+  opacity: 1 !important;
 }
 
-.swiper-pagination-bullet-active{
-    width: 1.5rem !important;
-    background: var(--main-color) !important;
+.swiper-pagination-bullet-active {
+  width: 1.5rem !important;
+  background: var(--main-color) !important;
 }
 
 
@@ -193,8 +194,8 @@ html::-webkit-scrollbar-thumb {
 /* Barra de Buscas */
 
 header input {
-    background: transparent;
-    color: white;
+  background: transparent;
+  color: white;
 }
 
 .search-container {
@@ -345,3 +346,54 @@ header input {
         visibility: hidden;
     }
 } 
+
+#telalogin {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(105, 105, 105);
+  border-radius: 17px;
+  padding: 10px;
+  width: 30%;
+  height: 43%;
+}
+
+legend {
+  padding: 10px;
+  text-align: center;
+}
+
+.inputlogin {
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+}
+.labelinput {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.inputlogin:focus ~ .labelinput,
+.inputlogin:valid ~ .labelinput {
+  top: -20px;
+  font-size: 12px;
+}
+
+.input {
+  position: relative;
+}
+
+#x {
+  float: right;
+}
+
