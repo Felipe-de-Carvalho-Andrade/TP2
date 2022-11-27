@@ -2,7 +2,7 @@ new Swiper("#fundo", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
-    delay: 2500,
+    delay: 5000,
     disableOnInteraction: false,
   },
   pagination: {
@@ -38,6 +38,3 @@ window.onscroll = () => {
   $('#menu-icon').removeClass('bx-x');
   $('.menu').removeClass('ativo');
 }
-
-
-fetch('https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1')
