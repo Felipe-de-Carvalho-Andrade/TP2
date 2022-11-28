@@ -10,6 +10,7 @@ function checklogin(user){
   return 1;
 }
 
+//Slide
 let swiper = new Swiper("#fundo", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -51,6 +52,7 @@ window.onscroll = () => {
   $('.menu').removeClass('ativo');
 }
 
+//Login e Cadastro
 let usuario = {
   nome: "",
   senha: "",
