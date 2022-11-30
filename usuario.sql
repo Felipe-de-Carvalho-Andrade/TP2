@@ -40,9 +40,9 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `senha`) VALUES
-(3, 'Bruno', 'gay69'),
-(4, 'beto', 'chutogay'),
-(5, 'prato', 'gay?');
+(3, 'Bruno', '69'),
+(4, 'beto', 'ff'),
+(5, 'prato', '?ff');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
